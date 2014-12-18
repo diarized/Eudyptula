@@ -3,18 +3,18 @@
 #include <linux/init.h>      // included for __init and __exit macros
 
 MODULE_LICENSE("GPLv3");
-MODULE_AUTHOR("Artur Kaminski");
+MODULE_AUTHOR("artur@monitor.stonith.pl");
 MODULE_DESCRIPTION("hello_world module");
 
 static int __init hello_init(void)
 {
-    printk(KERN_INFO "Hello world!\n");
+    printk(KERN_INFO "Hello World!\n");
     return 0;    // Non-zero return means that the module couldn't be loaded.
 }
 
 static void __exit hello_cleanup(void)
 {
-    printk(KERN_INFO "Cleaning up module.\n");
+    printk(KERN_INFO "Cleaning up module hello_world.\n");
 }
 
 module_init(hello_init);
